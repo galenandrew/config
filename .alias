@@ -1,6 +1,3 @@
-# helper functions
-
-# ALIAS's
 alias g='git'
 alias gh='hub'
 alias p='pagoda'
