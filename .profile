@@ -7,11 +7,6 @@ if [ -f ~/.env ]; then
 	. ~/.env
 fi
 
-# Git Completion script
-if [ -f ~/.git-completion.bash ]; then
-	. ~/.git-completion.bash
-fi
-
 # Alias's
 if [ -f ~/.alias ]; then
 	. ~/.alias
