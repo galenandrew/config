@@ -1,0 +1,17 @@
+# helper functions
+
+# ALIAS's
+alias g='git'
+alias gh='hub'
+alias p='pagoda'
+alias v='vagrant'
+alias ..='cd ..'
+alias ll='ls -Gla' # add color to ls
+alias clients='cd ~/Sites/sq1/clients/;reset;ll'
+alias internal='cd ~/Sites/sq1/internal/;reset;ll'
+alias adaptive='cd ~/Sites/sq1/internal/adaptiveaudience;reset;ll'
+alias personal='cd ~/Sites/personal/;reset;ll'
+alias freelance='cd ~/Sites/freelance/;reset;ll'
+alias opensource='cd ~/Sites/opensource/;reset;ll'
+alias lishlinode='ssh -t galenandrew@lish-dallas.linode.com gat1'
+alias listssh='cat ~/.ssh/config'

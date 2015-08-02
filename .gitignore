@@ -7,3 +7,10 @@
 !.gitconfig
 !.gitignore_global
 !.git-completion.bash
+!.profile
+!.alias
+!.bash*
+.bash_history
+# !.zs*
+# !.zp*
+# !.zl*
