@@ -14,3 +14,7 @@
 # !.zs*
 # !.zp*
 # !.zl*
+!.atom/styles.less
+!.atom/init.coffee
+!.atom/keymap.cson
+!.atom/snippets.cson
