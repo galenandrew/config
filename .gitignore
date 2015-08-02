@@ -4,3 +4,6 @@
 # exclude the files that should be tracked
 !.gitignore
 !README.md
+!.gitconfig
+!.gitignore_global
+!.git-completion.bash

@@ -1,0 +1,62 @@
+[core]
+	quotepath = false
+	excludesfile = /Users/anturner/.gitignore_global
+#	editor = atom --wait
+#	autocrlf = input
+[user]
+	name = Andrew Turner
+	email = galen.turner@me.com
+[mergetool]
+	keepBackup = true
+[push]
+	default = simple
+[help]
+	autocorrect = 1
+[alias]
+	s = status -sb
+	sm = submodule
+	c = commit -m
+	ac = commit -am
+	co = checkout
+	b = branch
+	bl = branch -la
+	blocal = rev-parse --abbrev-ref HEAD
+	r = remote
+	rl = remote -v
+	rp = remote prune
+	rpo = remote prune origin
+	m = merge
+	mnff = merge --no-ff
+	a = add --all
+	d = diff --word-diff
+	pl = pull
+	ps = push
+	psa = push --all
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	amend = commit --amend -C HEAD
+	changemsg = commit --allow-empty --amend -m
+	empty = commit --allow-empty -m
+	contributions = shortlog -sn
+	sm-status = submodule foreach 'echo `git status -sb`'
+	sm-fetchall = submodule foreach 'echo `git fetch --all`'
+	sm-pull = submodule foreach 'echo `git pull`'
+	sm-rprune = submodule foreach 'echo `git remote prune origin`'
+	sm-branch = submodule foreach 'echo `git rev-parse --abbrev-ref HEAD`'
+	sm-co = !sh -c 'git submodule foreach "echo `git checkout $1`"' -
+	sm-master = submodule foreach 'echo `git checkout master`'
+	sm-development = submodule foreach 'echo `git checkout development`'
+[color]
+	ui = true
+[color "status"]
+	header = normal
+	added = green
+	changed = yellow
+	untracked = cyan
+	deleted = red
+	removed = red
+[credential]
+	helper = osxkeychain
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

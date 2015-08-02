@@ -1,0 +1,8 @@
+# -------------------- system generated files
+.DS_Store
+Thumbs.db
+
+# -------------------- Custom Ignored Files
+*.ignore
+
+# -------------------- Specific Files to Ignore
