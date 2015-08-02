@@ -1,0 +1,6 @@
+# ignore everything
+*
+
+# exclude the files that should be tracked
+!.gitignore
+!README.md
