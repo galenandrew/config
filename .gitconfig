@@ -41,6 +41,7 @@
 	sm-status = submodule foreach 'echo `git status -sb`'
 	sm-fetchall = submodule foreach 'echo `git fetch --all`'
 	sm-pull = submodule foreach 'echo `git pull`'
+	sm-rpo = submodule foreach 'echo `git remote prune origin`'
 	sm-rprune = submodule foreach 'echo `git remote prune origin`'
 	sm-branch = submodule foreach 'echo `git rev-parse --abbrev-ref HEAD`'
 	sm-co = !sh -c 'git submodule foreach "echo `git checkout $1`"' -
