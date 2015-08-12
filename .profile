@@ -41,11 +41,6 @@ if [ -d /Applications/Postgres.app ]; then
 	export PATH=$PATH:"/Applications/Postgres.app/Contents/Versions/9.4/bin"
 fi
 
-# Boot2Docker
-if [ $(boot2docker status) != "poweroff" ]; then
-	eval "$(boot2docker shellinit)"
-fi
-
 # VSCode (Visual Studio Code)
 code () {
   if [[ $# = 0 ]]
