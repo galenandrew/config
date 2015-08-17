@@ -29,7 +29,7 @@ function reviseprompt {
 PS1="
 ${TITLEBAR}\
 $WHITE[\$(date +%H:%M)]\
-$WHITE[$GREEN_BOLD\u:$CYAN\w$WHITE]$GREEN\$(parse_git_branch)\
+$WHITE[$WHITE_BOLD\u:$CYAN\w$WHITE]$GREEN\$(parse_git_branch)\
 $WHITE
 \$ "
 PS2='> '
