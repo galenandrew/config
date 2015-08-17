@@ -3,34 +3,29 @@
 ###
 
 # Load in sensitive data through .env file
-if [ -f ~/.env ]; then
-	. ~/.env
+if [ -f $HOME/.env ]; then
+	. $HOME/.env
 fi
 
 # Alias's
-if [ -f ~/.alias ]; then
-	. ~/.alias
+if [ -f $HOME/.alias ]; then
+	. $HOME/.alias
 fi
 
 # Default paths
-export PATH="/Users/anturner/bin:$PATH"
-
-# PEAR bin paths
-export PATH="/Users/anturner/pear/bin:$PATH"
-
-# Add RVM to PATH for scripting
-# export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$HOME/bin:$PATH"
 
 # Ruby Environment (rbenv)
-if [ -d ~/.rbenv ]; then
+if [ -d $HOME/.rbenv ]; then
 	export PATH="$HOME/.rbenv/bin:$PATH"
 	eval "$(rbenv init -)"
 fi
 
 # Node Version Manager
-if [ -d ~/.nvm ]; then
-	export NVM_DIR="/Users/anturner/.nvm"
+if [ -d $HOME/.nvm ]; then
+	export NVM_DIR="$HOME/.nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+	[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 fi
 
 # Default Node Environment
