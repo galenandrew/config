@@ -30,7 +30,7 @@ fi
 # Node Version Manager
 if [ -d ~/.nvm ]; then
 	export NVM_DIR="/Users/anturner/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 fi
 
 # Default Node Environment
@@ -43,11 +43,11 @@ fi
 
 # VSCode (Visual Studio Code)
 code () {
-  if [[ $# = 0 ]]
-  then
-    open -a "Visual Studio Code"
-  else
-    [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
-    open -a "Visual Studio Code" --args "$F"
-  fi
+	if [[ $# = 0 ]]
+	then
+		open -a "Visual Studio Code"
+	else
+		[[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+		open -a "Visual Studio Code" --args "$F"
+	fi
 }
