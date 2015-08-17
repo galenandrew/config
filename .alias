@@ -1,6 +1,9 @@
 alias g='git'
 alias gh='hub'
 alias v='vagrant'
+alias d='docker'
+alias dm='docker-machine'
+alias dc='docker-compose'
 alias ..='cd ..'
 alias ll='ls -Gla' # add color to ls
 alias work='cd ~/code/dialexa/projects/;reset;ll'
