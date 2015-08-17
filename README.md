@@ -43,3 +43,19 @@ These items are not included within this repository, but are things I enjoy havi
 - [**Hub**](https://hub.github.com): A command-line wrapper for `git` that integrates with GitHub
 - [**nvm**](https://github.com/creationix/nvm): Node Version Manager - Simple bash script to manage multiple active node.js versions
 - [**rbenv**](https://github.com/sstephenson/rbenv): Better ruby version / environment management. (_[Why not RVM?](https://github.com/sstephenson/rbenv/wiki/Why-rbenv%3F)_)
+
+
+### NVM
+
+First, install `nvm` from  https://github.com/creationix/nvm#install-script
+
+
+Next, install the latest version of Node (from source `-s` so that it includes `npm`)
+```
+nvm install -s [latest version number]
+```
+
+Finally, set version as default for shell
+```
+nvm alias default [latest version number]
+```
