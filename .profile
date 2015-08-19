@@ -13,7 +13,15 @@ if [ -f $HOME/.alias ]; then
 fi
 
 # Default paths
-export PATH="$HOME/bin:$PATH"
+if [ -d $HOME/bin ]; then
+	export PATH="$HOME/bin:$PATH"
+fi
+
+# github/hub (wrapper for git)
+if [ -f $HOME/.hub/hub ]; then
+	export PATH="$HOME/.hub:$PATH"
+	[[ -r $HOME/.hub/etc/hub.bash_completion.sh ]] && . $HOME/.hub/etc/hub.bash_completion.sh
+fi
 
 # Ruby Environment (rbenv)
 if [ -d $HOME/.rbenv ]; then
@@ -45,4 +53,14 @@ code () {
 		[[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
 		open -a "Visual Studio Code" --args "$F"
 	fi
+}
+
+# helper function to activate a particular docker machine
+dm_activate () {
+	eval "$(docker-machine env $1)"
+}
+
+# helper function to activate boot2docker's VM
+b2d_activate () {
+	eval "$(boot2docker shellinit)"
 }
