@@ -18,3 +18,22 @@
   'Lorem Ipsum':
     'prefix': 'lorem'
     'body': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+'*.js':
+  'Mocha Describe':
+      'prefix': 'des'
+      'body': 'describe(\'$1\', function() {$2});'
+  'Mocha It':
+      'prefix': 'it'
+      'body': 'it(\'$1\', function(${2:done}) {$3});'
+  'Mocha Before':
+      'prefix': 'bef'
+      'body': 'before(function(${1:done}) {$2});'
+  'Mocha BeforeEach':
+      'prefix': 'befea'
+      'body': 'beforeEach(function(${1:done}) {$2});'
+  'Mocha After':
+      'prefix': 'aft'
+      'body': 'after(function(${1:done}) {$2});'
+  'Mocha AfterEach':
+      'prefix': 'aftea'
+      'body': 'afterEach(function(${1:done}) {$2});'
