@@ -20,7 +20,11 @@ fi
 # github/hub (wrapper for git)
 if [ -f $HOME/.hub/hub ]; then
 	export PATH="$HOME/.hub:$PATH"
-	[[ -r $HOME/.hub/etc/hub.bash_completion.sh ]] && . $HOME/.hub/etc/hub.bash_completion.sh
+	if [ -n "$ZSH_VERSION" ]; then
+		[[ -r $HOME/.hub/etc/hub.zsh_completion ]] && . $HOME/.hub/etc/hub.zsh_completion
+	elif [ -n "$BASH_VERSION" ]; then
+		[[ -r $HOME/.hub/etc/hub.bash_completion.sh ]] && . $HOME/.hub/etc/hub.bash_completion.sh
+	fi
 fi
 
 # Ruby Environment (rbenv)
@@ -33,7 +37,9 @@ fi
 if [ -d $HOME/.nvm ]; then
 	export NVM_DIR="$HOME/.nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-	[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+	if [ -n "$BASH_VERSION" ]; then
+		[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+	fi
 fi
 
 # Default Node Environment
