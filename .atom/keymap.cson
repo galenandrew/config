@@ -20,6 +20,10 @@
 '.platform-darwin atom-text-editor':
   'shift-cmd-space': 'bracket-matcher:select-inside-brackets'
 
+# '.platform-darwin':
+#   'ctrl-cmd-[': 'pane:focus-next-pane'
+#   'ctrl-cmd-]': 'pane:focus-previous-pane'
+
 # Default Keymaps for Markdown Writer
 # https://atom.io/packages/markdown-writer
 #
