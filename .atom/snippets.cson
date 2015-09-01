@@ -38,5 +38,5 @@
     'prefix': 'aftea'
     'body': 'afterEach(function(${1:done}) {$2});'
   'Use Strict':
-    'prefix': 'ustr'
+    'prefix': 'ustri'
     'body': '\'use strict\';\n\n$1'
