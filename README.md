@@ -59,3 +59,7 @@ Finally, set version as default for shell
 ```
 nvm alias default [latest version number]
 ```
+
+### ZPRETZO
+
+Follow instructions to install ZPRETZO from https://github.com/sorin-ionescu/prezto.
