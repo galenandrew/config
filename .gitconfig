@@ -1,11 +1,11 @@
 [core]
 	quotepath = false
-	excludesfile = /Users/anturner/.gitignore_global
+	excludesfile = /Users/galenandrew/.gitignore_global
 #	editor = atom --wait
 #	autocrlf = input
 [user]
 	name = Andrew Turner
-	email = galen.turner@me.com
+	email = andrew@dialexa.com
 [mergetool]
 	keepBackup = true
 [push]
@@ -19,7 +19,8 @@
 	ac = commit -am
 	co = checkout
 	b = branch
-	bl = branch -la
+	bl = branch -l
+	bla = branch -la
 	blocal = rev-parse --abbrev-ref HEAD
 	r = remote
 	rl = remote -v
@@ -41,6 +42,7 @@
 	sm-status = submodule foreach 'echo `git status -sb`'
 	sm-fetchall = submodule foreach 'echo `git fetch --all`'
 	sm-pull = submodule foreach 'echo `git pull`'
+	sm-up = submodule foreach 'echo `git up`'
 	sm-rpo = submodule foreach 'echo `git remote prune origin`'
 	sm-rprune = submodule foreach 'echo `git remote prune origin`'
 	sm-branch = submodule foreach 'echo `git rev-parse --abbrev-ref HEAD`'
@@ -61,3 +63,7 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
