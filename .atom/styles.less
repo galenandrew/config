@@ -9,5 +9,8 @@
  */
 
 atom-text-editor, :host {
-
+  .gutter .line-number.folded {
+    border-left: 2px solid @syntax-gutter-text-color;
+    padding-left: calc(0.5em - 2px);
+  }
 }
