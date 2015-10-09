@@ -70,3 +70,15 @@ dm_activate () {
 b2d_activate () {
 	eval "$(boot2docker shellinit)"
 }
+
+# helper function to restart and reset docker containers
+dc_restart () {
+	dc stop $@;
+	dc rm -f $@;
+	dc up -d $@;
+}
+
+# dc_restart helper function with log output
+dc_restart_logs () {
+	dc_restart $@ && dc logs $@;
+}

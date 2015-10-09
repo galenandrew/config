@@ -5,7 +5,7 @@
 #	autocrlf = input
 [user]
 	name = Andrew Turner
-	email = andrew@dialexa.com
+	email = galen.turner@me.com
 [mergetool]
 	keepBackup = true
 [push]
