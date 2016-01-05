@@ -21,9 +21,9 @@
 	b = branch
 	bl = branch -l
 	bla = branch -la
-	blocal = rev-parse --abbrev-ref HEAD
+	bls = for-each-ref --sort='-authordate:iso8601' --format='%(objectname:short) %(authordate:relative)%09 %(upstream:short)%09%(upstream:trackshort) %(refname:short) %(HEAD)%09%(contents:subject)' refs/heads
 	bs = for-each-ref --format="%(push:track)" refs/heads
-	bstatus = for-each-ref --sort='-authordate:iso8601' --format='%(objectname:short) %(authordate:relative)%09 %(upstream:short)%09%(upstream:trackshort) %(refname:short) %(HEAD)%09%(contents:subject)' refs/heads
+	blocal = rev-parse --abbrev-ref HEAD
 	r = remote
 	rl = remote -v
 	rp = remote prune
