@@ -17,6 +17,7 @@ function reviseprompt {
 	local   CYAN_BOLD="\[\033[1;36m\]"
 	local       WHITE="\[\033[0;37m\]"
 	local  WHITE_BOLD="\[\033[1;37m\]"
+	local  WHITE_BOLD="\[\033[1;0m\]"
 	case $TERM in
 		xterm*)
 		TITLEBAR='\[\033]0;\u@\h:\w\007\]'

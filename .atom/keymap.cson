@@ -17,8 +17,8 @@
 #   'ctrl-p': 'core:move-down'
 #
 
-'.platform-darwin atom-text-editor':
-  'shift-cmd-space': 'bracket-matcher:select-inside-brackets'
+".platform-darwin atom-text-editor":
+  "shift-cmd-space": "bracket-matcher:select-inside-brackets"
 
 # '.platform-darwin':
 #   'ctrl-cmd-[': 'pane:focus-next-pane'
@@ -51,5 +51,5 @@
   "cmd-j cmd-d": "markdown-writer:jump-between-reference-definition"
   "cmd-j cmd-t": "markdown-writer:jump-to-next-table-cell"
 
-'atom-workspace':
-  'cmd-ctrl-p': 'git-projects:toggle'
+"atom-workspace":
+  "cmd-ctrl-p": "git-projects:toggle"

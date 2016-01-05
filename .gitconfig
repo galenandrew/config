@@ -22,6 +22,8 @@
 	bl = branch -l
 	bla = branch -la
 	blocal = rev-parse --abbrev-ref HEAD
+	bs = for-each-ref --format="%(push:track)" refs/heads
+	bstatus = for-each-ref --sort='-authordate:iso8601' --format='%(objectname:short) %(authordate:relative)%09 %(upstream:short)%09%(upstream:trackshort) %(refname:short) %(HEAD)%09%(contents:subject)' refs/heads
 	r = remote
 	rl = remote -v
 	rp = remote prune
@@ -30,25 +32,28 @@
 	mnff = merge --no-ff
 	a = add --all
 	d = diff --word-diff
-	pl = pull
+	ds = diff --staged
+	pl = pull --rebase
 	ps = push
 	psa = push --all
 	unstage = reset HEAD --
-	last = log -1 HEAD
 	amend = commit --amend -C HEAD
 	changemsg = commit --allow-empty --amend -m
 	empty = commit --allow-empty -m
+	last = log -1 HEAD
+	slog = shortlog
 	contributions = shortlog -sn
-	sm-status = submodule foreach 'echo `git status -sb`'
-	sm-fetchall = submodule foreach 'echo `git fetch --all`'
-	sm-pull = submodule foreach 'echo `git pull`'
-	sm-up = submodule foreach 'echo `git up`'
-	sm-rpo = submodule foreach 'echo `git remote prune origin`'
-	sm-rprune = submodule foreach 'echo `git remote prune origin`'
-	sm-branch = submodule foreach 'echo `git rev-parse --abbrev-ref HEAD`'
+	logdiff = log --oneline --name-status
+	sm-status = submodule foreach 'git status -sb'
+	sm-fetchall = submodule foreach 'git fetch --all'
+	sm-pull = submodule foreach 'git pull'
+	sm-up = submodule foreach 'git up'
+	sm-rpo = submodule foreach 'git remote prune origin'
+	sm-rprune = submodule foreach 'git remote prune origin'
+	sm-branch = submodule foreach 'git rev-parse --abbrev-ref HEAD'
 	sm-co = !sh -c 'git submodule foreach "echo `git checkout $1`"' -
-	sm-master = submodule foreach 'echo `git checkout master`'
-	sm-development = submodule foreach 'echo `git checkout development`'
+	sm-master = submodule foreach 'git checkout master'
+	sm-development = submodule foreach 'git checkout development'
 [color]
 	ui = true
 [color "status"]
@@ -67,3 +72,7 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[git-up "bundler"]
+	check = true
+[git-up "fetch"]
+	all = true

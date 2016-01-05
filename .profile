@@ -73,7 +73,7 @@ b2d_activate () {
 
 # helper function to restart and reset docker containers
 dc_restart () {
-	dc stop $@;
+	dc kill $@;
 	dc rm -f $@;
 	dc up -d $@;
 }

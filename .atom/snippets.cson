@@ -40,3 +40,31 @@
   'Use Strict':
     'prefix': 'ustri'
     'body': '\'use strict\';\n\n$1'
+  'Hapi Plugin':
+    'prefix': 'hapiPlugin'
+    'body': """
+exports.register = function $1(server, options, next) {
+	$3
+
+	return next();
+};
+
+exports.register.attributes = {
+	name: '$2',
+	version: process.env.npm_package_version,
+};
+"""
+  'Hapi Route':
+    'prefix': 'hapiRoute'
+    'body': """
+server.route({
+	method: ['$1'],
+	path: '/$2',
+	config: {$3},
+	handler: function routeHandler(request, reply) {
+		$4
+
+		return reply();
+	},
+});
+"""
