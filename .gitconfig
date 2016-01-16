@@ -31,8 +31,9 @@
 	m = merge
 	mnff = merge --no-ff
 	a = add --all
-	d = diff --word-diff
+	d = diff
 	ds = diff --staged
+	dw = diff --word-diff
 	pl = pull --rebase
 	ps = push
 	psa = push --all
