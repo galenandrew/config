@@ -7,7 +7,7 @@ This repository consists of my preferred computer configurations such as dot fil
 ## Installation / Set Up
 **UPDATE: I no longer recommend this approach (home folder being a git repository). Instead, config files/repository should be it's own subfolder, then any files needed in your user folder path should be copied/aliased into it.**
 
-**This repository is intended to be in the root of your home folder so it can not simply be cloned down. The following steps will properly set up a local copy of this repository in your home folder, but will also overwrite any existing local files that are contained within this repository so PROCEED WITH CAUTION!!**
+This repository is intended to be in the root of your home folder so it can not simply be cloned down. The following steps will properly set up a local copy of this repository in your home folder, but will also overwrite any existing local files that are contained within this repository so PROCEED WITH CAUTION!!
 
 _NOTE: I am not responsible for the loss of any important files on your local filesystem by following these instructions.s
  May the force be with you!_
